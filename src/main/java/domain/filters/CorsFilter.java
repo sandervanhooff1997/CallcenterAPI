@@ -33,8 +33,15 @@ public class CorsFilter implements ContainerResponseFilter {
     public void filter( ContainerRequestContext requestCtx, ContainerResponseContext responseCtx ) throws IOException {
         log.info( "Executing REST response filter" );
 
-        responseCtx.getHeaders().add( "Access-Control-Allow-Origin", "*" );
-        responseCtx.getHeaders().add( "Access-Control-Allow-Credentials", "true" );
-        responseCtx.getHeaders().add( "Access-Control-Allow-Methods", "GET, POST, DELETE, PUT" );
+        responseCtx.getHeaders().add(
+                "Access-Control-Allow-Origin", "*");
+        responseCtx.getHeaders().add(
+                "Access-Control-Allow-Credentials", "true");
+        responseCtx.getHeaders().add(
+                "Access-Control-Allow-Headers",
+                "origin, content-type, accept, authorization");
+        responseCtx.getHeaders().add(
+                "Access-Control-Allow-Methods",
+                "GET, POST, PUT, DELETE, OPTIONS, HEAD");
     }
 }

@@ -45,6 +45,14 @@ public class AuthService extends BaseService {
         if (email.isEmpty() || password.isEmpty())
             return null;
 
+        try {
+            // encode password with SHA256
+            password = AuthenticationUtils.encodeSHA256(password);
+        } catch (Exception e) {
+            logger.warning(e.getMessage());
+            return null;
+        }
+
         Employee e = getByEmailAndPassword(email, password);
 
         if (e == null)
