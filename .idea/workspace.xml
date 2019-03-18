@@ -7,7 +7,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="128486c8-444d-4c27-9ff3-48ccb4e92fea" name="Default Changelist" comment="" />
+    <list default="true" id="128486c8-444d-4c27-9ff3-48ccb4e92fea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +41,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="12" />
+          <entry key="gitignore" value="1" />
           <entry key="java" value="329" />
           <entry key="jsp" value="2" />
           <entry key="xml" value="63" />
@@ -49,12 +52,14 @@
           <entry key="CLASS" value="12" />
           <entry key="JAVA" value="329" />
           <entry key="JSP" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="46" />
+          <entry key="gitignore" value="8" />
           <entry key="java" value="7868" />
           <entry key="txt" value="5" />
           <entry key="xml" value="228" />
@@ -63,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="7868" />
-          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="PLAIN_TEXT" value="59" />
           <entry key="XML" value="228" />
         </counts>
       </usages-collector>
@@ -77,11 +82,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Auth/UserEJB.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -127,12 +141,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/domain/services/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/services/SubscriptionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/controllers/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/controllers/ProductController.java" />
@@ -183,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/test/java/BaseRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/BeanValidationTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -694,7 +708,7 @@
       <workItem from="1552556032782" duration="5749000" />
       <workItem from="1552571799681" duration="81000" />
       <workItem from="1552572275497" duration="607000" />
-      <workItem from="1552899128420" duration="1065000" />
+      <workItem from="1552899128420" duration="1152000" />
     </task>
     <servers />
   </component>
@@ -731,7 +745,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79777000" />
+    <option name="totallyTimeSpent" value="79864000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -787,7 +801,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/models/MyInterceptor.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/reflect/Proxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1127,6 +1140,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
         </state>
       </provider>
     </entry>
