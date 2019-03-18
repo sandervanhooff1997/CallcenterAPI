@@ -5,9 +5,8 @@ import domain.models.Call;
 import domain.services.CallService;
 
 import javax.ejb.EJB;
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
 
 @Path("call")
 public class CallController {
@@ -17,17 +16,8 @@ public class CallController {
 
     @GET
     @Produces("application/json")
-    public Response2 getAll(@Context HttpServletRequest request) {
-//        Gson gson = new Gson();
-//
-//        String json = gson.toJson(service.getAll());
-//try {
-//    return Response.ok().build();
-//} catch (Exception e) {
-//    System.out.println(e.getMessage());
-//    return Response.ok().build();
-//}
-        return new Response2(true);
+    public Response getAll() {
+        return Response.ok(service.getAll()).build();
     }
 
     @GET

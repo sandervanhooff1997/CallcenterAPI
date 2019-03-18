@@ -1,7 +1,6 @@
 package domain.models;
 
 import com.sun.istack.NotNull;
-import org.apache.bval.constraints.Email;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
@@ -14,6 +13,8 @@ import java.util.List;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Employee.getById", query = "select e from Employee e where e.id = :id"),
+        @NamedQuery(name = "Employee.getByEmail", query = "select e from Employee e where e.email = :email"),
+        @NamedQuery(name = "Employee.getByEmailAndPassword", query = "select e from Employee e where e.email = :email and e.password = :password"),
         @NamedQuery(name = "Employee.getAll", query = "select e from Employee e")
 })
 @Table(name = "employees")
@@ -29,9 +30,10 @@ public class Employee {
     @NotNull
     private String lastname;
 
-    @Email
     @NotNull
     private String email;
+
+    private String password;
 
     @CreationTimestamp
     private Date created;
@@ -119,6 +121,18 @@ public class Employee {
 
     public void setCompany(Company company) {
         this.company = company;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean validForRegistration () {
+        return !this.email.isEmpty() && !this.password.isEmpty() && !this.firstname.isEmpty() && !this.lastname.isEmpty();
     }
 
     @Override

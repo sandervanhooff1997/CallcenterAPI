@@ -1,26 +1,14 @@
 package domain.repositories;
 
 import domain.models.Call;
-import domain.models.SimpleInterceptor;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
-import javax.interceptor.Interceptors;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Local
 @Stateless
-@Interceptors(SimpleInterceptor.class)
-public class CallRepository {
-
-    @PersistenceContext(unitName = "callcenterPU")
-    private EntityManager em;
-
-    public CallRepository() {
-    }
-
+public class CallRepository extends BaseRepository {
     public List<Call> getAll() {
         try {
             return em.createQuery("SELECT c FROM Call c", Call.class).getResultList();
