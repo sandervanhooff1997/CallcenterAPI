@@ -1,5 +1,6 @@
 package domain.services;
 
+import com.auth0.jwt.interfaces.DecodedJWT;
 import domain.models.Employee;
 import domain.repositories.EmployeeRepository;
 import domain.utils.AuthenticationUtils;
@@ -27,9 +28,6 @@ public class AuthService extends BaseService {
         if (!employee.validForRegistration())
             return false;
 
-        if (getByEmail(employee.getEmail()) != null)
-            return false;
-
         try {
             // encode password with SHA256
             employee.setPassword(AuthenticationUtils.encodeSHA256(employee.getPassword()));
@@ -44,23 +42,16 @@ public class AuthService extends BaseService {
     }
 
     public String login (String email, String password) {
-        logger.info("loggin in: " + email + " / " + password);
-
         if (email.isEmpty() || password.isEmpty())
             return null;
 
         Employee e = getByEmailAndPassword(email, password);
-        logger.info("loggin in: " + e);
 
         if (e == null)
             return null;
 
-        // emp found!
-        Map<String, Object> claims = new HashMap<>();
-        claims.put("employee", e);
-
         // create JWT token
-        return jwtService.createJWT(claims);
+        return jwtService.createJWT(e);
     }
 
     public Employee getById(Long id) {
