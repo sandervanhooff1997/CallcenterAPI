@@ -1,24 +1,21 @@
 package domain.Auth;
 
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import javax.ejb.Local;
 import javax.ejb.Stateless;
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.security.auth.login.LoginContext;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+@Local
 @Stateless
-public class UserEJB {
+public class JaasAuthRepository {
 
-    @PersistenceContext(unitName="callcenterPU")
+    @PersistenceContext(unitName = "callcenterPU")
     private EntityManager em;
 
-    public User createUser(User user) {
+    public User create(User user) {
         try {
             user.setPassword(AuthenticationUtils.encodeSHA256(user.getPassword()));
         } catch (Exception e) {
@@ -29,26 +26,13 @@ public class UserEJB {
         Group group = new Group();
         group.setEmail(user.getEmail());
         group.setGroupname(Group.USERS_GROUP);
-
         em.persist(user);
         em.persist(group);
 
         return user;
     }
 
-    public boolean login(User user) {
-        if (user.getEmail() == "s.vanhooff@hotmail.com") {
-            return false;
-        }
-
-        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-        Map<String, Object> sessionMap = externalContext.getSessionMap();
-        sessionMap.put("User", user);
-
-        return true;
-    }
-
-    public User findUserById(Long id) {
+    public User getById(Long id) {
         TypedQuery<User> query = em.createNamedQuery("findUserById", User.class);
         query.setParameter("email", id);
         User user = null;
