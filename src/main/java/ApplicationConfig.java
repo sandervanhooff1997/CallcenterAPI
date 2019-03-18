@@ -1,4 +1,3 @@
-import domain.Auth.JaaSAuthController;
 import domain.controllers.*;
 
 import javax.ws.rs.core.Application;
@@ -17,7 +16,6 @@ public class ApplicationConfig extends Application {
         controllers.add(EmployeeController.class);
         controllers.add(ProductController.class);
         controllers.add(SubscriptionController.class);
-        controllers.add(JaaSAuthController.class);
 
         return controllers;
     }
