@@ -7,12 +7,14 @@ import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.logging.Logger;
 
 @Local
 @Stateless
+@MappedSuperclass
 @Interceptors(CallcenterInterceptor.class)
 public abstract class CRUDRepository<T> implements IRepository<T> {
     @PersistenceContext(unitName = "callcenterPU")

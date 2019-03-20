@@ -8,11 +8,13 @@ import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.interceptor.Interceptors;
+import javax.persistence.MappedSuperclass;
 import java.util.List;
 import java.util.logging.Logger;
 
 @Local
 @Stateless
+@MappedSuperclass
 @Interceptors(CallcenterInterceptor.class)
 public abstract class CRUDService<T> implements IService<T> {
     protected Logger logger = Logger.getLogger(this.getClass().getName());

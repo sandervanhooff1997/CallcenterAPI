@@ -2,6 +2,7 @@ package domain.controllers.call;
 
 import domain.controllers.CRUDController;
 import domain.models.Call;
+import domain.services.call.CallService;
 import domain.services.call.ICallService;
 
 import javax.ejb.EJB;
@@ -13,4 +14,7 @@ public class CallController extends CRUDController<Call> implements ICallControl
     @EJB
     private ICallService service;
 
+    public CallController() {
+        setService(service);
+    }
 }
