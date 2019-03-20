@@ -1,4 +1,4 @@
-import domain.repositories.CallRepository;
+import domain.repositories.call.CallRepository;
 import org.junit.BeforeClass;
 
 import javax.naming.InitialContext;

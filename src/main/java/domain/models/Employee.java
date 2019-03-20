@@ -19,7 +19,6 @@ import java.util.List;
 })
 @Table(name = "employees")
 public class Employee {
-
     @Id
     @GeneratedValue
     private Long id;
