@@ -4,11 +4,16 @@ import domain.models.Call;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Local
 @Stateless
-public class CallRepository extends BaseRepository {
+public class CallRepository {
+    @PersistenceContext(unitName = "callcenterPU")
+    private EntityManager em;
+
     public List<Call> getAll() {
         try {
             return em.createQuery("SELECT c FROM Call c", Call.class).getResultList();

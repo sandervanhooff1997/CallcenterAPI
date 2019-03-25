@@ -11,7 +11,6 @@ import java.util.List;
 @Local
 @Stateless
 public class CompanyRepository {
-
     @PersistenceContext(unitName = "callcenterPU")
     private EntityManager em;
 

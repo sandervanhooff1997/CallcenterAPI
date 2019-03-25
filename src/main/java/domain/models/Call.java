@@ -6,6 +6,7 @@ import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.util.Date;
 import java.util.List;
@@ -25,6 +26,7 @@ public class Call {
     @Positive
     private int duration;
 
+    @NotNull
     private Date date;
 
     @CreationTimestamp

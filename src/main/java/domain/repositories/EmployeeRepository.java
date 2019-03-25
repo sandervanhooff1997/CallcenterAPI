@@ -4,11 +4,17 @@ import domain.models.Employee;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Local
 @Stateless
-public class EmployeeRepository extends BaseRepository {
+public class EmployeeRepository {
+
+    @PersistenceContext(unitName = "callcenterPU")
+    private EntityManager em;
+
     public List<Employee> getAll() {
         return em.createNamedQuery("Employee.getAll", Employee.class).getResultList();
     }
@@ -21,7 +27,6 @@ public class EmployeeRepository extends BaseRepository {
         try {
             return em.createNamedQuery("Employee.getByEmail", Employee.class).setParameter("email", email).getSingleResult();
         } catch (Exception e) {
-            logger.warning(e.getMessage());
             return null;
         }
     }
@@ -33,7 +38,6 @@ public class EmployeeRepository extends BaseRepository {
                     .setParameter("password", password)
                     .getSingleResult();
         } catch (Exception e) {
-            logger.warning(e.getMessage());
             return null;
         }
     }

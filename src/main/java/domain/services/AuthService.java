@@ -8,23 +8,14 @@ import domain.utils.AuthenticationUtils;
 import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
-<<<<<<< HEAD:src/main/java/domain/services/auth/AuthService.java
 import javax.enterprise.inject.Default;
 import java.util.logging.Logger;
 
 @Local
 @Stateless
 @Default
-public class AuthService implements IAuthService {
+public class AuthService {
     protected Logger logger = Logger.getLogger(this.getClass().getName());
-=======
-import java.util.HashMap;
-import java.util.Map;
-
-@Local
-@Stateless
-public class AuthService extends BaseService {
->>>>>>> parent of e5769dc... Interfacing:src/main/java/domain/services/AuthService.java
 
     @EJB
     JWTService jwtService;

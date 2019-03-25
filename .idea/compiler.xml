@@ -9,6 +9,8 @@
         <module name="callcenter" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="callcenter" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
