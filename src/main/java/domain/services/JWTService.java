@@ -1,8 +1,9 @@
-package domain.services.jwt;
+package domain.services;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
+import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
@@ -13,11 +14,16 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
 
 @Local
 @Stateless
+<<<<<<< HEAD:src/main/java/domain/services/jwt/JWTService.java
 @Default
 public class JWTService implements IJWTService {
+=======
+public class JWTService {
+>>>>>>> parent of e5769dc... Interfacing:src/main/java/domain/services/JWTService.java
     private static final String secret = "secret";
     private static final String issuer = "callcenter";
     private static final int DAYS_TO_ADD = 1;
@@ -34,8 +40,7 @@ public class JWTService implements IJWTService {
         return JWT.create()
                 .withIssuer(issuer)
                 .withClaim("email", e.getEmail())
-                .withClaim("firstname", e.getFirstname())
-                .withClaim("lastname", e.getLastname())
+                .withClaim("password", e.getPassword())
                 .withExpiresAt(getExpireDate(DAYS_TO_ADD))
                 .sign(algorithm);
     }
@@ -43,7 +48,7 @@ public class JWTService implements IJWTService {
     public void verifyJWT(String token) throws JWTVerificationException {
         DecodedJWT decoded = verifier.verify(token);
 
-        if (decoded.getClaim("email").isNull() || decoded.getClaim("firstname").isNull() || decoded.getClaim("lastname").isNull())
+        if (decoded.getClaim("email").isNull() || decoded.getClaim("password").isNull())
             throw new JWTVerificationException("Invalid claim data");
 
         // expired
@@ -51,7 +56,7 @@ public class JWTService implements IJWTService {
             throw new JWTVerificationException("Token expired");
     }
 
-    public Date getExpireDate(int daysToAdd) {
+    private Date getExpireDate(int daysToAdd) {
         Calendar c = Calendar.getInstance();
         c.setTime(new Date());
         c.add(Calendar.DATE, daysToAdd);

@@ -1,7 +1,7 @@
-package domain.controllers.auth;
+package domain.controllers;
 
 import domain.models.Employee;
-import domain.services.auth.IAuthService;
+import domain.services.AuthService;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -10,7 +10,7 @@ import javax.ws.rs.core.Response;
 @Path("auth")
 public class AuthController implements IAuthController {
     @EJB
-    private IAuthService service;
+    private AuthService service;
 
     @Override
     public Response register(Employee employee) {
