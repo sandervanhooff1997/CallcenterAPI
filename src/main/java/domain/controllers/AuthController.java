@@ -21,6 +21,11 @@ public class AuthController {
     @Path("/login")
     @POST
     public Response login(Employee employee) {
-        return Response.ok(service.login(employee.getEmail(), employee.getPassword())).build();
+        String token = service.login(employee.getEmail(), employee.getPassword());
+
+        if (token == null)
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+
+        return Response.ok(token).build();
     }
 }

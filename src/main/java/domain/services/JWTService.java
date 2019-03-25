@@ -37,7 +37,6 @@ public class JWTService {
                 .withIssuer(issuer)
                 .withClaim("id", e.getId())
                 .withClaim("email", e.getEmail())
-                .withClaim("password", e.getPassword())
                 .withExpiresAt(getExpireDate(EXPIRE_MINUTES))
                 .sign(algorithm);
     }
@@ -45,7 +44,7 @@ public class JWTService {
     public void verifyJWT(String token) throws JWTVerificationException {
         DecodedJWT decoded = verifier.verify(token);
 
-        if (decoded.getClaim("id").isNull() || decoded.getClaim("email").isNull() || decoded.getClaim("password").isNull())
+        if (decoded.getClaim("id").isNull() || decoded.getClaim("email").isNull())
             throw new JWTVerificationException("Invalid claim data");
     }
 
