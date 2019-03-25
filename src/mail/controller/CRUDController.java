@@ -8,6 +8,7 @@ import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.interceptor.Interceptors;
+import javax.persistence.MappedSuperclass;
 import javax.ws.rs.core.Response;
 import java.util.logging.Logger;
 
@@ -19,6 +20,7 @@ public abstract class CRUDController<T> implements IController<T> {
 
     protected IService<T> service;
 
+    @EJB
     public void setService(IService<T> service) {
         this.service = service;
     }

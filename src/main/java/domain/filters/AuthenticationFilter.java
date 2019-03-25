@@ -28,26 +28,26 @@ public class AuthenticationFilter implements ContainerRequestFilter {
         UriInfo info = requestContext.getUriInfo();
         if (info.getPath().contains("auth"))
             return;
-
-        // Get the Authorization header from the request
-        String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-
-        // Validate the Authorization header
-        if (!isTokenBasedAuthentication(authorizationHeader)) {
-            abortWithUnauthorized(requestContext);
-            return;
-        }
-
-        // Extract the token from the Authorization header
-        String token = authorizationHeader
-                .substring(AUTHENTICATION_SCHEME.length()).trim();
-
-        try {
-            // Validate the token
-            service.verifyJWT(token);
-        } catch (Exception e) {
-            abortWithUnauthorized(requestContext);
-        }
+//
+//        // Get the Authorization header from the request
+//        String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+//
+//        // Validate the Authorization header
+//        if (!isTokenBasedAuthentication(authorizationHeader)) {
+//            abortWithUnauthorized(requestContext);
+//            return;
+//        }
+//
+//        // Extract the token from the Authorization header
+//        String token = authorizationHeader
+//                .substring(AUTHENTICATION_SCHEME.length()).trim();
+//
+//        try {
+//            // Validate the token
+//            service.verifyJWT(token);
+//        } catch (Exception e) {
+//            abortWithUnauthorized(requestContext);
+//        }
     }
 
     private boolean isTokenBasedAuthentication(String authorizationHeader) {

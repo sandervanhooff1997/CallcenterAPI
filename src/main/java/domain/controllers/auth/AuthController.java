@@ -8,22 +8,16 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 @Path("auth")
-public class AuthController {
+public class AuthController implements IAuthController {
     @EJB
     private IAuthService service;
 
-    @POST
-    @Path("register")
-    @Consumes("application/json")
-    @Produces("application/json")
+    @Override
     public Response register(Employee employee) {
         return Response.ok(service.register(employee)).build();
     }
 
-    @POST
-    @Path("login")
-    @Consumes("application/json")
-    @Produces("application/json")
+    @Override
     public Response login(Employee employee) {
         return Response.ok(service.login(employee.getEmail(), employee.getPassword())).build();
     }

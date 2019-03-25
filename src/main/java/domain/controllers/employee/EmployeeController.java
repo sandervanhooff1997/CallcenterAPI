@@ -10,8 +10,6 @@ import javax.ejb.Stateless;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Local
-@Stateless
 @Path("employee")
 public class EmployeeController extends CRUDController<Employee> implements IEmployeeController {
 

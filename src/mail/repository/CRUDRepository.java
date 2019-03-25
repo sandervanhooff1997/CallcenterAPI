@@ -1,13 +1,14 @@
-package domain.services;
+package domain.repositories;
 
 import domain.interceptors.CallcenterInterceptor;
-import domain.repositories.IRepository;
 import org.hibernate.HibernateException;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.interceptor.Interceptors;
+import javax.persistence.EntityManager;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -15,19 +16,25 @@ import java.util.logging.Logger;
 @Stateless
 @MappedSuperclass
 @Interceptors(CallcenterInterceptor.class)
-public abstract class CRUDService<T> implements IService<T> {
+public abstract class CRUDRepository<T> implements IRepository<T> {
+    @PersistenceContext(unitName = "callcenterPU")
+    protected EntityManager em;
+
     protected Logger logger = Logger.getLogger(this.getClass().getName());
 
-    protected IRepository<T> repository;
+    private Class<T> type;
 
-    public void setRepository(IRepository<T> repository) {
-        this.repository = repository;
+    public CRUDRepository() {
+    }
+
+    public CRUDRepository(Class<T> type){
+        this.type = type;
     }
 
     @Override
     public T getById(Long id) {
         try {
-            return repository.getById(id);
+            return em.find(type, id);
         } catch (HibernateException e) {
             logger.warning(e.getMessage());
             return null;
@@ -37,7 +44,7 @@ public abstract class CRUDService<T> implements IService<T> {
     @Override
     public List<T> getAll() {
         try {
-            return repository.getAll();
+            return em.createNamedQuery(type.getSimpleName() +".getAll", type).getResultList();
         } catch (HibernateException e) {
             logger.warning(e.getMessage());
             return null;
@@ -47,7 +54,7 @@ public abstract class CRUDService<T> implements IService<T> {
     @Override
     public void save(T t) {
         try {
-            repository.save(t);
+            em.persist(t);
         } catch (HibernateException e) {
             logger.warning(e.getMessage());
         }
@@ -56,17 +63,16 @@ public abstract class CRUDService<T> implements IService<T> {
     @Override
     public void update(T t) {
         try {
-            repository.update(t);
+            em.merge(t);
         } catch (HibernateException e) {
             logger.warning(e.getMessage());
         }
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(T t) {
         try {
-            T entity = getById(id);
-            repository.delete(entity);
+            em.remove(t);
         } catch (HibernateException e) {
             logger.warning(e.getMessage());
         }

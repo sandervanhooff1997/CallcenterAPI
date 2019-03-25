@@ -8,10 +8,12 @@ import domain.utils.AuthenticationUtils;
 import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import java.util.logging.Logger;
 
 @Local
 @Stateless
+@Default
 public class AuthService implements IAuthService {
     protected Logger logger = Logger.getLogger(this.getClass().getName());
 

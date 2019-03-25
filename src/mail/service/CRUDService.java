@@ -20,10 +20,6 @@ public abstract class CRUDService<T> implements IService<T> {
 
     protected IRepository<T> repository;
 
-    public void setRepository(IRepository<T> repository) {
-        this.repository = repository;
-    }
-
     @Override
     public T getById(Long id) {
         try {

@@ -10,11 +10,13 @@ import domain.models.Employee;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import java.util.Calendar;
 import java.util.Date;
 
 @Local
 @Stateless
+@Default
 public class JWTService implements IJWTService {
     private static final String secret = "secret";
     private static final String issuer = "callcenter";

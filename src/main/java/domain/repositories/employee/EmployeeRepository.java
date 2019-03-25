@@ -6,9 +6,11 @@ import org.hibernate.HibernateException;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 
 @Local
 @Stateless
+@Default
 public class EmployeeRepository extends CRUDRepository<Employee> implements IEmployeeRepository {
     @Override
     public Employee getByEmail(String email) throws HibernateException {
