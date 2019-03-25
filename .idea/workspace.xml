@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e196ae43-9333-43cb-a917-eb9447961646" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,24 +27,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="12" />
+          <entry key="java" value="16" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="16" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="170" />
+          <entry key="java" value="367" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="170" />
+          <entry key="JAVA" value="367" />
         </counts>
       </usages-collector>
     </session>
@@ -59,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/controllers/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="169">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -71,8 +69,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+            <state relative-caret-position="173">
+              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/JWTService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -80,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="183">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +116,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/domain/models/Call.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/controllers/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/services/AuthService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java" />
       </list>
     </option>
@@ -214,7 +231,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="authc&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/controllers/AuthController.java" />
+    <property name="SearchEverywhereHistoryKey" value="jwt&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/services/JWTService.java&#10;authc&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/controllers/AuthController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
@@ -432,12 +449,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553511025720</updated>
-      <workItem from="1553511030333" duration="2496000" />
+      <workItem from="1553511030333" duration="6257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2496000" />
+    <option name="totallyTimeSpent" value="6257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -458,8 +475,8 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5879518" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4686747" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.586747" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30843374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -486,9 +503,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java</url>
-          <line>30</line>
+          <line>71</line>
           <properties />
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -522,31 +545,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/JWTService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        <state relative-caret-position="70">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        <state relative-caret-position="245">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="183">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -555,8 +571,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/controllers/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="169">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/JWTService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
         </state>
       </provider>
     </entry>
