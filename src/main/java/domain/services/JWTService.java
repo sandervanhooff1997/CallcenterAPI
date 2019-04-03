@@ -34,7 +34,6 @@ public class JWTService {
                 .withIssuer(issuer)
                 .withClaim("id", e.getId())
                 .withClaim("email", e.getEmail())
-                .withClaim("isAdmin", e.isAdmin())
                 .withClaim("roles", e.getCommaSeperatedRoles())
                 .withExpiresAt(getExpireDate(EXPIRE_MINUTES))
                 .sign(algorithm);
