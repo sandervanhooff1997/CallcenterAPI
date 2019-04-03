@@ -52,7 +52,7 @@ public class Employee {
 
     @OneToMany(targetEntity = Role.class)
     @LazyCollection(LazyCollectionOption.FALSE)
-    private List roles;
+    private List<Role> roles;
 
     @ManyToOne
     private Company company;
@@ -66,7 +66,7 @@ public class Employee {
         this.email = email;
         this.calls = calls;
         this.company = company;
-        this.roles = new ArrayList();
+        this.roles = new ArrayList<>();
     }
 
     public Long getId() {
@@ -163,6 +163,29 @@ public class Employee {
 
     public List getRoles() {
         return roles;
+    }
+
+    public String getCommaSeperatedRoles () {
+        StringBuilder sb = new StringBuilder();
+        String result = "";
+
+        // convert isAdmin to role admin
+        if (isAdmin)
+            sb.append("admin").append(",");
+
+        if (roles.size() > 0) {
+
+            // append each role name to result
+            for (Role role : roles) {
+                sb.append(role.getName()).append(",");
+            }
+        }
+
+        // remove last comma if > 0 roles were set
+        if (sb.length() > 0)
+            result = sb.deleteCharAt(sb.length() - 1).toString();
+
+        return result;
     }
 
     public void setRoles(List roles) {

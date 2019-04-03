@@ -7,32 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e196ae43-9333-43cb-a917-eb9447961646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/AuthorizationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/models/Auth/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/repositories/AuthorisationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/repositories/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/services/AuthorizationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/services/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/CallController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/CallController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/controllers/SubscriptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/controllers/response/Response2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/models/Call.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/models/Call.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/models/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/models/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/repositories/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/services/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/utils/AuthenticationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/utils/AuthenticationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CallTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JWTServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JWTServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,25 +32,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="68" />
+          <entry key="java" value="73" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="68" />
+          <entry key="JAVA" value="73" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="3301" />
+          <entry key="java" value="3775" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3301" />
+          <entry key="JAVA" value="3775" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
@@ -86,53 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/controllers/AuthorizationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/utils/AuthenticationUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthorizationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthenticationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/JWTService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+            <state relative-caret-position="183">
+              <caret line="37" column="51" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,53 +76,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/EmployeeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="e#428#429#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/RoleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/repositories/RoleRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-              <folding>
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#954#955#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="167" column="29" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="29" />
+            <state relative-caret-position="309">
+              <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
+              <folding>
+                <element signature="e#3744#3745#0" expanded="true" />
+                <element signature="e#3778#3779#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,11 +157,11 @@
         <option value="$PROJECT_DIR$/src/main/java/domain/repositories/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/models/Auth/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/services/RoleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/services/AuthorizationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/utils/AuthenticationUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/controllers/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/services/JWTService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java" />
       </list>
     </option>
   </component>
@@ -347,7 +257,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="autho&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/services/AuthorizationService.java&#10;empl&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/models/Auth/Employee.java&#10;filter&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/filters/AuthenticationFilter.java&#10;employeerepo&#9;PSI&#9;JAVA://domain.repositories.EmployeeRepository&#10;jwt&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/services/JWTService.java&#10;authc&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/controllers/AuthController.java" />
+    <property name="SearchEverywhereHistoryKey" value="emp&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/models/Auth/Employee.java&#10;empl&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/services/EmployeeService.java&#10;autho&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/services/AuthorizationService.java&#10;filter&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/filters/AuthenticationFilter.java&#10;employeerepo&#9;PSI&#9;JAVA://domain.repositories.EmployeeRepository&#10;jwt&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/services/JWTService.java&#10;authc&#9;FILE&#9;file:///Users/sandervanhooff/Webapps/SE/Callcenter/api/src/main/java/domain/controllers/AuthController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -575,27 +485,27 @@
       <updated>1553511025720</updated>
       <workItem from="1553511030333" duration="6583000" />
       <workItem from="1553541109344" duration="3566000" />
-      <workItem from="1554292870032" duration="6466000" />
+      <workItem from="1554292870032" duration="7796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16615000" />
+    <option name="totallyTimeSpent" value="17945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.24578314" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.41566265" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.41566265" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -632,6 +542,12 @@
           <line>71</line>
           <properties />
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java</url>
+          <line>171</line>
+          <properties />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -743,16 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/controllers/AuthenticationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -805,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="167" column="29" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/RoleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -820,36 +719,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#305#306#0" expanded="true" />
             <element signature="e#347#348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/JWTService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,6 +746,57 @@
           <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/filters/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/services/JWTService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/models/Auth/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
+          <folding>
+            <element signature="e#3744#3745#0" expanded="true" />
+            <element signature="e#3778#3779#0" expanded="true" />
           </folding>
         </state>
       </provider>
