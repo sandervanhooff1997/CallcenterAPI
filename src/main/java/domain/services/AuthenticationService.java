@@ -1,7 +1,6 @@
 package domain.services;
 
-import com.auth0.jwt.interfaces.DecodedJWT;
-import domain.models.Employee;
+import domain.models.Auth.Employee;
 import domain.repositories.EmployeeRepository;
 import domain.utils.AuthenticationUtils;
 
@@ -14,14 +13,14 @@ import java.util.logging.Logger;
 @Local
 @Stateless
 @Default
-public class AuthService {
+public class AuthenticationService {
     protected Logger logger = Logger.getLogger(this.getClass().getName());
 
     @EJB
     JWTService jwtService;
 
     @EJB
-    EmployeeRepository employeeRepository;
+    EmployeeService employeeService;
 
     public boolean register (Employee employee) {
         if (employee == null)
@@ -38,7 +37,7 @@ public class AuthService {
             return false;
         }
 
-        employeeRepository.create(employee);
+        employeeService.create(employee);
 
         return true;
     }
@@ -65,14 +64,14 @@ public class AuthService {
     }
 
     public Employee getById(Long id) {
-        return employeeRepository.getById(id);
+        return employeeService.getById(id);
     }
 
     public Employee getByEmail(String email) {
-        return employeeRepository.getByEmail(email);
+        return employeeService.getByEmail(email);
     }
 
     public Employee getByEmailAndPassword(String email, String password) {
-        return employeeRepository.getByEmailAndPassword(email, password);
+        return employeeService.getByEmailAndPassword(email, password);
     }
 }

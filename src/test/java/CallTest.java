@@ -1,6 +1,7 @@
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import domain.models.*;
+import domain.models.Auth.Employee;
 import org.junit.Rule;
 import org.junit.Test;
 

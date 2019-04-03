@@ -3,26 +3,23 @@ package domain.services;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
-import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
-import domain.models.Employee;
+import domain.models.Auth.Employee;
 
+import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
-import javax.enterprise.inject.Default;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Map;
 
 @Local
 @Stateless
-
 public class JWTService {
     private static final String secret = "secret";
     private static final String issuer = "callcenter";
-    private static final int EXPIRE_MINUTES = 20;
+    private static final int EXPIRE_MINUTES = 60;
     private static final Algorithm algorithm = Algorithm.HMAC256(secret);
     private JWTVerifier verifier;
 
@@ -37,15 +34,32 @@ public class JWTService {
                 .withIssuer(issuer)
                 .withClaim("id", e.getId())
                 .withClaim("email", e.getEmail())
+                .withClaim("isAdmin", e.isAdmin())
                 .withExpiresAt(getExpireDate(EXPIRE_MINUTES))
                 .sign(algorithm);
     }
 
-    public void verifyJWT(String token) throws JWTVerificationException {
+    public DecodedJWT verifyJWT(String token) throws JWTVerificationException {
         DecodedJWT decoded = verifier.verify(token);
 
         if (decoded.getClaim("id").isNull() || decoded.getClaim("email").isNull())
             throw new JWTVerificationException("Invalid claim data");
+
+        return decoded;
+    }
+
+    public boolean isAdmin (String token) {
+        try {
+            DecodedJWT decodedJwt = verifyJWT(token);
+
+            if (decodedJwt.getClaim("isAdmin").isNull())
+                return false;
+
+            return decodedJwt.getClaim("isAdmin").asBoolean();
+        } catch (JWTVerificationException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
     }
 
     private Date getExpireDate(int minutesToAdd) {

@@ -1,6 +1,6 @@
 package domain.services;
 
-import domain.models.Employee;
+import domain.models.Auth.Employee;
 import domain.repositories.EmployeeRepository;
 
 import javax.ejb.EJB;
@@ -47,5 +47,13 @@ public class EmployeeService {
 
         repository.delete(employee);
         return true;
+    }
+
+    public Employee getByEmail(String email) {
+        return repository.getByEmail(email);
+    }
+
+    public Employee getByEmailAndPassword(String email, String password) {
+        return repository.getByEmailAndPassword(email, password);
     }
 }

@@ -1,5 +1,6 @@
 package domain.models;
 
+import domain.models.Auth.Employee;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;

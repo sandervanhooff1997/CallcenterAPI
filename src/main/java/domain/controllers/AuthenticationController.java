@@ -1,16 +1,16 @@
 package domain.controllers;
 
-import domain.models.Employee;
-import domain.services.AuthService;
+import domain.models.Auth.Employee;
+import domain.services.AuthenticationService;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
-@Path("auth")
-public class AuthController {
+@Path("authentication")
+public class AuthenticationController {
     @EJB
-    private AuthService service;
+    private AuthenticationService service;
 
     @Path("/register")
     @POST

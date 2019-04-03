@@ -1,6 +1,5 @@
 package domain.controllers;
 
-import domain.controllers.response.Response2;
 import domain.models.Call;
 import domain.services.CallService;
 
@@ -23,38 +22,44 @@ public class CallController {
     @GET
     @Path("/{id}")
     @Produces("application/json")
-    public Response2 getById(@PathParam("id") Long id) {
+    public Response getById(@PathParam("id") Long id) {
         Call call = service.getById(id);
-        boolean success = call != null;
 
-        return new Response2(success, call);
+        if (call == null)
+            return Response.status(Response.Status.NOT_FOUND).build();
+
+
+        return Response.ok(call).build();
     }
 
     @POST
     @Consumes("application/json")
     @Produces("application/json")
-    public Response2 create(Call call) {
-        boolean success = service.create(call);
+    public Response create(Call call) {
+        if (!service.create(call))
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
-        return new Response2(success);
+        return Response.status(Response.Status.CREATED).build();
     }
 
     @PUT
     @Consumes("application/json")
     @Produces("application/json")
-    public Response2 update(Call call) {
-        boolean success = service.update(call);
+    public Response update(Call call) {
+        if(!service.update(call))
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
-        return new Response2(success);
+        return Response.status(Response.Status.OK).build();
     }
 
     @DELETE
     @Path("/{id}")
     @Consumes("application/json")
     @Produces("application/json")
-    public Response2 delete(@PathParam("id") Long id) {
-        boolean success = service.delete(id);
+    public Response delete(@PathParam("id") Long id) {
+        if (!service.delete(id))
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
-        return new Response2(success);
+        return Response.status(Response.Status.OK).build();
     }
 }

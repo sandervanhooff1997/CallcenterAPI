@@ -1,6 +1,6 @@
 package domain.repositories;
 
-import domain.models.Employee;
+import domain.models.Auth.Employee;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;

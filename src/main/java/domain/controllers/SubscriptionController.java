@@ -1,11 +1,11 @@
 package domain.controllers;
 
-import domain.controllers.response.Response2;
 import domain.models.Subscription;
 import domain.services.SubscriptionService;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 
 @Path("subscription")
 public class SubscriptionController {
@@ -15,45 +15,51 @@ public class SubscriptionController {
 
     @GET
     @Produces("application/json")
-    public Response2 getAll() {
-        return new Response2(true, service.getAll());
+    public Response getAll() {
+        return Response.ok(service.getAll()).build();
     }
 
     @GET
     @Path("/{id}")
     @Produces("application/json")
-    public Response2 getById(@PathParam("id") Long id) {
+    public Response getById(@PathParam("id") Long id) {
         Subscription subscription = service.getById(id);
-        boolean success = subscription != null;
 
-        return new Response2(success, subscription);
+        if (subscription == null)
+            return Response.status(Response.Status.NOT_FOUND).build();
+
+
+        return Response.ok(subscription).build();
     }
 
     @POST
     @Consumes("application/json")
     @Produces("application/json")
-    public Response2 create(Subscription subscription) {
-        boolean success = service.create(subscription);
+    public Response create(Subscription subscription) {
+        if (!service.create(subscription))
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
-        return new Response2(success);
+        return Response.status(Response.Status.CREATED).build();
     }
 
     @PUT
     @Consumes("application/json")
     @Produces("application/json")
-    public Response2 update(Subscription subscription) {
-        boolean success = service.update(subscription);
+    public Response update(Subscription subscription) {
+        if(!service.update(subscription))
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
-        return new Response2(success);
+        return Response.status(Response.Status.OK).build();
     }
 
     @DELETE
     @Path("/{id}")
     @Consumes("application/json")
     @Produces("application/json")
-    public Response2 delete(@PathParam("id") Long id) {
-        boolean success = service.delete(id);
+    public Response delete(@PathParam("id") Long id) {
+        if (!service.delete(id))
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
-        return new Response2(success);
+        return Response.status(Response.Status.OK).build();
     }
 }

@@ -1,4 +1,4 @@
-import domain.models.Employee;
+import domain.models.Auth.Employee;
 import domain.services.JWTService;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,6 +1,7 @@
 package domain.models;
 
 import com.sun.istack.NotNull;
+import domain.models.Auth.Employee;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;

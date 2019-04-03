@@ -1,9 +1,11 @@
 package domain.utils;
 
+import javax.ws.rs.core.HttpHeaders;
 import javax.xml.bind.DatatypeConverter;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 public final class AuthenticationUtils {
 
@@ -22,5 +24,20 @@ public final class AuthenticationUtils {
         return DatatypeConverter.printBase64Binary(digest).toString();
     }
 
+    public static String getTokenFromHeader(HttpHeaders headers) {
+        List<String> authHeaders = headers.getRequestHeader(HttpHeaders.AUTHORIZATION);
+        String authSchema = "Bearer ";
+
+        if (authHeaders.isEmpty())
+            return null;
+
+        // check if header is present and has the auth schema
+        String authHeader = authHeaders.get(0);
+        if (authHeader.isEmpty() || !authHeader.contains(authSchema))
+            return null;
+
+        // remove auth schema from token
+        return authHeader.replaceAll(authSchema, "");
+    }
 
 }

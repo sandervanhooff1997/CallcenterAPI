@@ -1,12 +1,15 @@
-package domain.models;
+package domain.models.Auth;
 
 import com.sun.istack.NotNull;
+import domain.models.Call;
+import domain.models.Company;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -35,6 +38,8 @@ public class Employee {
 
     private String password;
 
+    private boolean isAdmin;
+
     @CreationTimestamp
     private Date created;
 
@@ -44,6 +49,10 @@ public class Employee {
     @OneToMany(targetEntity = Call.class)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List calls;
+
+    @OneToMany(targetEntity = Role.class)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List roles;
 
     @ManyToOne
     private Company company;
@@ -57,6 +66,7 @@ public class Employee {
         this.email = email;
         this.calls = calls;
         this.company = company;
+        this.roles = new ArrayList();
     }
 
     public Long getId() {
@@ -135,6 +145,30 @@ public class Employee {
         return !this.email.isEmpty() && !this.password.isEmpty() && !this.firstname.isEmpty() && !this.lastname.isEmpty();
     }
 
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public void AssignRole (Role role) {
+        this.roles.add(role);
+    }
+
+    public void RemoveRole (Role role) {
+        this.roles.remove(role);
+    }
+
+    public List getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List roles) {
+        this.roles = roles;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -146,6 +180,7 @@ public class Employee {
                 ", updated=" + updated +
                 ", calls=" + calls +
                 ", company=" + company +
+                ", isAdmin=" + isAdmin +
                 '}';
     }
 }
