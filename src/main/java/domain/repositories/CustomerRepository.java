@@ -16,11 +16,11 @@ public class CustomerRepository {
     private EntityManager em;
 
     public List<Customer> getAll() {
-        return em.createNamedQuery("Customer.getAll", Customer.class).getResultList();
+        return em.createNamedQuery("Customer.getAllRoles", Customer.class).getResultList();
     }
 
     public Customer getById(Long id) {
-        return em.createNamedQuery("Customer.getById", Customer.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Customer.getRoleById", Customer.class).setParameter("id", id).getSingleResult();
     }
 
     public void create(Customer customer) {

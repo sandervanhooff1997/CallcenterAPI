@@ -12,17 +12,24 @@ import javax.enterprise.inject.Default;
 @Stateless
 @Default
 public class MailService {
-    public void send (String to, String text) {
-        Email email = EmailBuilder.startingBlank()
-                .from("Callcenter", "info@callcenter.com")
-                .to("Sander van Hooff", "s.vanhooff@hotmail.com")
-                .withSubject("Two Factor Authentication")
-                .withPlainText("Your Callcenter verification code is: 0000")
-                .buildEmail();
+    public boolean send (String to, String subject, String text) {
+        try {
+            Email email = EmailBuilder.startingBlank()
+                    .from("Callcenter", "info@callcenter.com")
+                    .to(to, to)
+                    .withSubject(subject)
+                    .withHTMLText(text)
+                    .buildEmail();
 
-        MailerBuilder
-                .withSMTPServer("smtp.gmail.com", 587, "s.vanhooff1997@gmail.com", "Tuincentrum1997")
-                .buildMailer()
-                .sendMail(email);
+            MailerBuilder
+                    .withSMTPServer("smtp.gmail.com", 587, "s.vanhooff1997@gmail.com", "Tuincentrum1997")
+                    .buildMailer()
+                    .sendMail(email);
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+
     }
 }

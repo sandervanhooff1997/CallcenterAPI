@@ -16,11 +16,11 @@ public class ProductRepository {
     private EntityManager em;
 
     public List<Product> getAll() {
-        return em.createNamedQuery("Product.getAll", Product.class).getResultList();
+        return em.createNamedQuery("Product.getAllRoles", Product.class).getResultList();
     }
 
     public Product getById(Long id) {
-        return em.createNamedQuery("Product.getById", Product.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Product.getRoleById", Product.class).setParameter("id", id).getSingleResult();
     }
 
     public void create(Product product) {

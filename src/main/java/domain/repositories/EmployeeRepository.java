@@ -16,11 +16,11 @@ public class EmployeeRepository {
     private EntityManager em;
 
     public List<Employee> getAll() {
-        return em.createNamedQuery("Employee.getAll", Employee.class).getResultList();
+        return em.createNamedQuery("Employee.getAllRoles", Employee.class).getResultList();
     }
 
     public Employee getById(Long id) {
-        return em.createNamedQuery("Employee.getById", Employee.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Employee.getRoleById", Employee.class).setParameter("id", id).getSingleResult();
     }
 
     public Employee getByEmail(String email) {

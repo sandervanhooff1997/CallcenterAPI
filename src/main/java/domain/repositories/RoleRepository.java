@@ -16,7 +16,7 @@ public class RoleRepository {
     private EntityManager em;
 
     public Role getById(Long id) {
-        return em.createNamedQuery("Role.getById", Role.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Role.getRoleById", Role.class).setParameter("id", id).getSingleResult();
     }
 
     public void delete(Role role) {

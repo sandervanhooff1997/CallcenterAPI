@@ -2,7 +2,7 @@ package domain.services.Auth;
 
 import domain.models.Auth.Employee;
 import domain.models.Auth.Role;
-import domain.repositories.AuthorisationRepository;
+import domain.repositories.AuthRepository;
 import domain.services.EmployeeService;
 
 import javax.ejb.EJB;
@@ -25,23 +25,23 @@ public class AuthorizationService {
     RoleService roleService;
 
     @EJB
-    AuthorisationRepository repository;
+    AuthRepository repository;
 
     public boolean create (Role role) {
         if (role.getName() == null)
             return false;
 
-        repository.create(role);
+        repository.createRole(role);
 
         return true;
     }
 
     public Role getById(Long id) {
-        return repository.getById(id);
+        return repository.getRoleById(id);
     }
 
     public List<Role> getAll() {
-        return repository.getAll();
+        return repository.getAllRoles();
     }
 
 
@@ -49,17 +49,17 @@ public class AuthorizationService {
         if (role == null)
             return false;
 
-        repository.update(role);
+        repository.updateRole(role);
         return true;
     }
 
     public boolean delete(Long id) {
-        Role role = repository.getById(id);
+        Role role = repository.getRoleById(id);
 
         if (role == null)
             return false;
 
-        repository.delete(role);
+        repository.deleteRole(role);
         return true;
     }
 

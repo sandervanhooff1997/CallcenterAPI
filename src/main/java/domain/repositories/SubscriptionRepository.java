@@ -16,11 +16,11 @@ public class SubscriptionRepository {
     private EntityManager em;
 
     public List<Subscription> getAll() {
-        return em.createNamedQuery("Subscription.getAll", Subscription.class).getResultList();
+        return em.createNamedQuery("Subscription.getAllRoles", Subscription.class).getResultList();
     }
 
     public Subscription getById(Long id) {
-        return em.createNamedQuery("Subscription.getById", Subscription.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Subscription.getRoleById", Subscription.class).setParameter("id", id).getSingleResult();
     }
 
     public void create(Subscription subscription) {

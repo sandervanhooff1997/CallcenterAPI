@@ -15,11 +15,11 @@ public class CompanyRepository {
     private EntityManager em;
 
     public List<Company> getAll() {
-        return em.createNamedQuery("Company.getAll", Company.class).getResultList();
+        return em.createNamedQuery("Company.getAllRoles", Company.class).getResultList();
     }
 
     public Company getById(Long id) {
-        return em.createNamedQuery("Company.getById", Company.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Company.getRoleById", Company.class).setParameter("id", id).getSingleResult();
     }
 
     public void create(Company company) {
