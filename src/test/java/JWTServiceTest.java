@@ -1,5 +1,5 @@
 import domain.models.Auth.Employee;
-import domain.services.JWTService;
+import domain.services.Auth.JWTService;
 import org.junit.Before;
 import org.junit.Test;
 

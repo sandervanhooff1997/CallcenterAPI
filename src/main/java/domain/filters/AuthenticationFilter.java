@@ -1,6 +1,6 @@
 package domain.filters;
 
-import domain.services.JWTService;
+import domain.services.Auth.JWTService;
 
 import javax.ejb.EJB;
 import javax.ws.rs.container.ContainerRequestContext;

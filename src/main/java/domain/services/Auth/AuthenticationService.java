@@ -1,7 +1,7 @@
-package domain.services;
+package domain.services.Auth;
 
 import domain.models.Auth.Employee;
-import domain.repositories.EmployeeRepository;
+import domain.services.EmployeeService;
 import domain.utils.AuthenticationUtils;
 
 import javax.ejb.EJB;
@@ -18,6 +18,9 @@ public class AuthenticationService {
 
     @EJB
     JWTService jwtService;
+
+    @EJB
+    MailService mailService;
 
     @EJB
     EmployeeService employeeService;
@@ -58,6 +61,8 @@ public class AuthenticationService {
 
         if (e == null)
             return null;
+
+        mailService.send("+31642112663", "Two Factor Authentication code: 000000");
 
         // create JWT token
         return jwtService.createJWT(e);

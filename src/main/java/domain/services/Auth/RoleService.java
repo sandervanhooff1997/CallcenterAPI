@@ -1,4 +1,4 @@
-package domain.services;
+package domain.services.Auth;
 
 import domain.models.Auth.Role;
 import domain.repositories.RoleRepository;

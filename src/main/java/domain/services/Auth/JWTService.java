@@ -1,4 +1,4 @@
-package domain.services;
+package domain.services.Auth;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -52,10 +52,11 @@ public class JWTService {
         try {
             DecodedJWT decodedJwt = verifyJWT(token);
 
-            if (decodedJwt.getClaim("isAdmin").isNull())
+            if (decodedJwt.getClaim("roles").isNull())
                 return false;
 
-            return decodedJwt.getClaim("isAdmin").asBoolean();
+            // check if has role admin
+            return decodedJwt.getClaim("roles").asString().contains("admin");
         } catch (JWTVerificationException e) {
             System.out.println(e.getMessage());
             return false;

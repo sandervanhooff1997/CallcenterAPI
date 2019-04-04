@@ -1,7 +1,7 @@
 package domain.controllers;
 
-import domain.services.AuthorizationService;
-import domain.services.JWTService;
+import domain.services.Auth.AuthorizationService;
+import domain.services.Auth.JWTService;
 import domain.utils.AuthenticationUtils;
 
 import javax.ejb.EJB;

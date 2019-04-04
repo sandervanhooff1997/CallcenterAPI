@@ -38,8 +38,6 @@ public class Employee {
 
     private String password;
 
-    private boolean isAdmin;
-
     @CreationTimestamp
     private Date created;
 
@@ -145,14 +143,6 @@ public class Employee {
         return !this.email.isEmpty() && !this.password.isEmpty() && !this.firstname.isEmpty() && !this.lastname.isEmpty();
     }
 
-    public boolean isAdmin() {
-        return isAdmin;
-    }
-
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
-    }
-
     public void AssignRole (Role role) {
         this.roles.add(role);
     }
@@ -166,24 +156,18 @@ public class Employee {
     }
 
     public String getCommaSeperatedRoles () {
-        StringBuilder sb = new StringBuilder();
         String result = "";
 
-        // convert isAdmin to role admin
-        if (isAdmin)
-            sb.append("admin").append(",");
-
         if (roles.size() > 0) {
+            StringBuilder sb = new StringBuilder();
 
             // append each role name to result
             for (Role role : roles) {
                 sb.append(role.getName()).append(",");
             }
-        }
 
-        // remove last comma if > 0 roles were set
-        if (sb.length() > 0)
             result = sb.deleteCharAt(sb.length() - 1).toString();
+        }
 
         return result;
     }
@@ -203,7 +187,6 @@ public class Employee {
                 ", updated=" + updated +
                 ", calls=" + calls +
                 ", company=" + company +
-                ", isAdmin=" + isAdmin +
                 '}';
     }
 }

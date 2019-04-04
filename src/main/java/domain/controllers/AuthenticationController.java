@@ -1,7 +1,7 @@
 package domain.controllers;
 
 import domain.models.Auth.Employee;
-import domain.services.AuthenticationService;
+import domain.services.Auth.AuthenticationService;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
