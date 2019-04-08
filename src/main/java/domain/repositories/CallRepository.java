@@ -24,7 +24,7 @@ public class CallRepository {
     }
 
     public Call getById(Long id) {
-        return em.createNamedQuery("Call.getRoleById", Call.class).setParameter("id", id).getSingleResult();
+        return em.createNamedQuery("Call.getById", Call.class).setParameter("id", id).getSingleResult();
     }
 
     public void create(Call call) {

@@ -9,6 +9,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -46,6 +47,10 @@ public class Call {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List subscriptions;
 
+    @OneToMany(targetEntity = Link.class)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List links;
+
     public Call() {    }
 
     public Call(@Positive int duration, Date date, Customer customer, Employee employee, List subscriptions) {
@@ -54,6 +59,7 @@ public class Call {
         this.customer = customer;
         this.employee = employee;
         this.subscriptions = subscriptions;
+        this.links = new ArrayList();
     }
 
     public Long getId() {
@@ -120,6 +126,14 @@ public class Call {
         this.subscriptions = subscriptions;
     }
 
+    public List getLinks() {
+        return links;
+    }
+
+    public void setLinks(List links) {
+        this.links = links;
+    }
+
     @Override
     public String toString() {
         return "Call{" +
@@ -131,6 +145,7 @@ public class Call {
                 ", customer=" + customer +
                 ", employee=" + employee +
                 ", subscriptions=" + subscriptions +
+                ", links=" + links +
                 '}';
     }
 }
