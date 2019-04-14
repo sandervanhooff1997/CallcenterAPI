@@ -9,7 +9,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 @Path("company")
-@RolesAllowed(value = "users")
 public class CompanyController {
 
     @EJB
