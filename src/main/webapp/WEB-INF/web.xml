@@ -3,4 +3,18 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" >
   <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <param-name>com.auth0.domain</param-name>
+    <param-value>dev-svh1997.eu.auth0.com</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>com.auth0.clientId</param-name>
+    <param-value>PnBx2jfHFxQ_EdlmS9JkHFjvTfxUyTyz</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>com.auth0.clientSecret</param-name>
+    <param-value>2ovb3qP_ag6KGwgqsFIC6Ju6pwn9BBGDw_4OvCNylwg_-gD0NLOe1vprCf1Sn791</param-value>
+  </context-param>
 </web-app>
